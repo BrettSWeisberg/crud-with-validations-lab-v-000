@@ -13,6 +13,7 @@ class Song < ActiveRecord::Base
   def future_year?
     if self.release_year < Date.today
       true
+    end
   end
 
 end
