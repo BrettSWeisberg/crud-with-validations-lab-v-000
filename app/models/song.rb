@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   validates :released, inclusion: { in: [true, false] }
   validates :artist_name, presence: true
   validates :release_year, length: {is: 4}, if: :is_released?
-  validate :future_year?
+  validates :future_year?
 
   def is_released?
     self.released == true
