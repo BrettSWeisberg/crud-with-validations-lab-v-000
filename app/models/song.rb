@@ -6,7 +6,6 @@ class Song < ActiveRecord::Base
   validates :future_year?
 
   def is_released?
-    binding.pry
     self.released == true
   end
 
