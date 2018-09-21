@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
   end
 
   def future_year?
-    self. release 
+    self. release
 
 
 end
