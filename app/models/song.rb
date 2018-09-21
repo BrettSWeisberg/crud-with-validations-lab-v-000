@@ -3,6 +3,7 @@ class Song < ActiveRecord::Base
   validates :released, inclusion: { in: [true, false] }
   validates :artist_name, presence: true
   validates :release_year, length: {is: 4}, if: :is_released?
+  validates :future_year?
 
   def is_released?
     binding.pry
@@ -10,7 +11,8 @@ class Song < ActiveRecord::Base
   end
 
   def future_year?
-    self. release
+    if self.release_year > Date.today
 
+  end
 
 end
