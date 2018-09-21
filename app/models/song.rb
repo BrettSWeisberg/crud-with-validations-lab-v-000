@@ -5,8 +5,12 @@ class Song < ActiveRecord::Base
   validates :release_year, length: {is: 4}, if: :is_released?
 
   def is_released?
+    binding.pry
     self.released == true
   end
+
+  def future_year?
+    self. release 
 
 
 end
