@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
   end
 
   def future_year?
-    binding.pry
+  #  binding.pry
     if self.release_year != nil && self.release_year > Date.today.year
       errors.add(:release_year, "Release year can't be in the future")
     end
