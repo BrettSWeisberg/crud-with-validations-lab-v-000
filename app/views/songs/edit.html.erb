@@ -3,7 +3,7 @@
 <label>title</label><br>
 <%= f.text_field :title, :value => @song.title %><br>
 <label>released</label><br>
-<%= f.check_box_tag :released,:value => @song.released %><br>
+<%= f.check_box :released,:value => @song.released %><br>
 <label>release_year</label><br>
 <%= f.text_field :release_year,:value => @song.release_year %><br>
 <label>artist_name</label><br>
