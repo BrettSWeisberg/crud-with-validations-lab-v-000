@@ -39,7 +39,7 @@ class SongsController < ApplicationController
 
   def delete
     Song.find(params[:id]).destroy
-   redirect_to song_url
+    redirect_to song_url
   end
 
   private
